@@ -15,15 +15,19 @@ def index() :
 
 
 
-@app.route('/login')
+@app.route('/login', methods=['post', 'get'])
 def login() :
   '''
   View login page function that returns the login page and its data
   '''
 
   title = 'Login'
+  form = LoginForm()
 
-  return render_template('login.html', title = title)
+  if form.validate_on_submit() :
+    return redirect(url_for('index'))
+
+  return render_template('login.html', title = title, form = form)
 
 
 
