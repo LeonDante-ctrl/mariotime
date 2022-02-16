@@ -25,7 +25,13 @@ def login() :
   form = LoginForm()
 
   if form.validate_on_submit() :
-    return redirect(url_for('index'))
+
+    if form.username.data == 'shaviya' and form.password.data == '123456' :
+      return redirect(url_for('index'))
+
+    else :
+
+      return redirect(url_for('login'))
 
   return render_template('login.html', title = title, form = form)
 
