@@ -36,3 +36,14 @@ div.right {
   padding-bottom: 8em;
   padding-top: 8em;
 }
+
+
+div.container-fluid {
+  background-color: #B43838;
+}
+
+#demo {
+  margin: 0.5rem;
+  width: 45em;
+  height: 45em;
+}
