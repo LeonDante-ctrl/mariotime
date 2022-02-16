@@ -18,6 +18,8 @@
   </title>
   {% endif %}
 
+  <link rel="stylesheet" href="../static/styles/signup.css">
+
 </head>
 <body>
 
@@ -40,7 +42,7 @@
 
   <div class="container w-50">
 
-    <form method="post" action="">
+    <form class="fom" method="post" action="">
 
       {{form.hidden_tag()}}
 
@@ -135,6 +137,9 @@
 
       <div class="field-group">
 
+        <p>
+          Already have an <a href="\login">account</a>.
+        </p>
         {{ form.submit(class='btn btn-primary') }}
 
       </div>
