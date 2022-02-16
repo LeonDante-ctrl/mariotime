@@ -1,0 +1,19 @@
+.top {
+  background-image: url(../images/BG\ img.png);
+  background-repeat: no-repeat;
+  background-size: 130em 50em;
+  text-align: center;
+}
+
+button.play {
+  margin-top: 18em;
+  margin-bottom: 8em;
+  padding: 0.5rem 4rem;
+  border-radius: 12px;
+  background-color: #DA9090;
+  border: none;
+}
+
+button.play:hover {
+  background-color: #ECC935;
+}

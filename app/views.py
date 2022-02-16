@@ -28,13 +28,13 @@ def login() :
 
     if form.username.data == 'shaviya' and form.password.data == '123456' :
 
-      flash(f'Logged in successfully for { form.username.data }', category='success')
+      flash(f'Logged in successfully for { form.username.data }', category='success text-center')
 
       return redirect(url_for('index'))
 
     else :
 
-      flash(f'Logging in unsuccessfully as { form.username.data }', category='danger')
+      flash(f'Login unsuccessful!', category='danger text-center')
 
   return render_template('login.html', title = title, form = form)
 
@@ -51,7 +51,7 @@ def Register() :
 
   if form.validate_on_submit() :
 
-    flash(f'Account created successfully for { form.username.data }', category='success')
+    flash(f'Account created successfully for { form.username.data }', category='success text-center')
 
     return redirect(url_for('login'))
 
