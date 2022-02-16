@@ -46,4 +46,16 @@ div.container-fluid {
   margin: 0.5rem;
   width: 45em;
   height: 45em;
+  margin-left: 4rem;
+}
+
+#zombie {
+  height: 48em;
+  margin-top: -20rem;
+  margin-left: 20rem;
+  padding-bottom: 2rem;
+}
+
+div.text p{
+  margin-right: 6rem;
 }
