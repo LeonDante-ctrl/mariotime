@@ -34,7 +34,7 @@ def login() :
 
     else :
 
-      flash(f'Logging in unsuccessfully for { form.username.data }', category='danger')
+      flash(f'Logging in unsuccessfully as { form.username.data }', category='danger')
 
   return render_template('login.html', title = title, form = form)
 

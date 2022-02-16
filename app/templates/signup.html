@@ -1,3 +1,10 @@
+{% extends 'base.html' %}
+<!-- Content Block -->
+
+{% block content %}
+
+
+
 <head>
 
   <meta charset="utf-8">
@@ -44,7 +51,7 @@
         </legend>
 
         <div class="form-group">
-          {{ form.username.label(class='form-control-label') }}
+          {{ form.username.label(class='form-control-label') }} <br>
 
           {% if form.username.errors %}
           {{ form.username(class='form-control form-control-lg is-invalid') }}
@@ -64,7 +71,7 @@
 
 
         <div class="form-group">
-          {{ form.email.label(class='form-control-label') }}
+          {{ form.email.label(class='form-control-label') }} <br>
 
           {% if form.email.errors %}
           {{ form.email(class='form-control form-control-lg is-invalid') }}
@@ -84,7 +91,7 @@
 
 
         <div class="form-group">
-          {{ form.password.label(class='form-control-label') }}
+          {{ form.password.label(class='form-control-label') }}<br>
 
           {% if form.password.errors %}
           {{ form.password(class='form-control form-control-lg is-invalid') }}
@@ -104,7 +111,7 @@
 
 
         <div class="form-group">
-          {{ form.confirm_password.label(class='form-control-label') }}
+          {{ form.confirm_password.label(class='form-control-label') }}<br>
 
           {% if form.confirm_password.errors %}
           {{ form.confirm_password(class='form-control form-control-lg is-invalid') }}
@@ -142,3 +149,7 @@
 
 
 </body>
+
+
+
+{% endblock %}
