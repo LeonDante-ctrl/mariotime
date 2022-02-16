@@ -1,4 +1,4 @@
-from flask import redirect, render_template, url_for
+from flask import redirect, render_template, url_for, flash
 from app import app
 from app.forms import RegistrationForm, LoginForm
 
@@ -27,11 +27,14 @@ def login() :
   if form.validate_on_submit() :
 
     if form.username.data == 'shaviya' and form.password.data == '123456' :
+
+      flash(f'Logged in successfully for { form.username.data }', category='success')
+
       return redirect(url_for('index'))
 
     else :
 
-      return redirect(url_for('login'))
+      flash(f'Logging in unsuccessfully for { form.username.data }', category='danger')
 
   return render_template('login.html', title = title, form = form)
 
@@ -47,6 +50,9 @@ def Register() :
   form = RegistrationForm()
 
   if form.validate_on_submit() :
+
+    flash(f'Account created successfully for { form.username.data }', category='success')
+
     return redirect(url_for('login'))
 
   return render_template('signup.html', title = title, form = form)
