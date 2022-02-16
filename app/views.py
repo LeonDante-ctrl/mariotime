@@ -37,6 +37,6 @@ def Register() :
   form = RegistrationForm()
 
   if form.validate_on_submit() :
-    return redirect(url_for(login))
+    return redirect(url_for('login'))
 
   return render_template('signup.html', title = title, form = form)
