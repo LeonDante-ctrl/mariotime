@@ -1,4 +1,4 @@
-from flask import render_template
+from flask import redirect, render_template, url_for
 from app import app
 from app.forms import RegistrationForm, LoginForm
 
@@ -35,5 +35,8 @@ def Register() :
 
   title = 'Register'
   form = RegistrationForm()
+
+  if form.validate_on_submit() :
+    return redirect(url_for(login))
 
   return render_template('signup.html', title = title, form = form)
