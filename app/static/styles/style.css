@@ -17,3 +17,22 @@ button.play {
 button.play:hover {
   background-color: #ECC935;
 }
+
+div.second {
+  background-color: black;
+  color: white;
+}
+
+#mario {
+  height: 48em;
+  float: left;
+  margin-top: -26rem;
+  margin-left: 8rem;
+  padding-bottom: 5rem;
+}
+
+div.right {
+  margin-right: 30em;
+  padding-bottom: 8em;
+  padding-top: 8em;
+}
