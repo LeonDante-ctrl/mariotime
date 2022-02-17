@@ -1,0 +1,122 @@
+{% extends 'base.html' %}
+<!-- Content Block -->
+
+{% block content %}
+
+
+
+
+
+
+
+
+<head>
+
+  <meta charset="utf-8">
+  {% if title %}
+  <title>
+    {{ title }}
+  </title>
+  {% else %}
+  <title>
+    Sign in
+  </title>
+  {% endif %}
+
+
+  <link rel="stylesheet" href="../static/styles/login.css">
+
+</head>
+<body>
+  
+  {% with messages=get_flashed_messages(with_categories=true) %}
+
+    {% if messages %}
+      {% for category, message in messages %}
+        <div class="alert alert-{{ category }}">
+          {{ message }}
+        </div>
+      {% endfor %}
+    {% endif %}
+
+  {% endwith %}
+
+
+  <div class="container w-50">
+
+    <form class="fom" method="post" action="">
+
+      {{form.hidden_tag()}}
+
+      <fieldset>
+
+        <legend class="border-bottom mb-4">
+          SIGN IN
+        </legend>
+
+        <div class="form-group">
+          {{ form.username.label(class='form-control-label') }}<br>
+
+          {% if form.username.errors %}
+          {{ form.username(class='form-control form-control-lg is-invalid') }}
+            {% for error in form.username.errors %}
+            <span>
+              {{ error }}
+            </span>
+            {% endfor %}
+
+            {% else %}
+            {{ form.username(class='form-control-lg') }}
+
+          {% endif %}
+
+          
+        </div>
+
+
+        <div class="form-group">
+          {{ form.password.label(class='form-control-label') }}<br>
+
+          {% if form.password.errors %}
+          {{ form.password(class='form-control form-control-lg is-invalid') }}
+            {% for error in form.password.errors %}
+            <span>
+              {{ error }}
+            </span>
+            {% endfor %}
+
+            {% else %}
+            {{ form.password(class='form-control-lg') }}
+            
+          {% endif %}
+
+          
+        </div>
+
+
+
+      </fieldset>
+
+
+      <div class="field-group">
+
+        <p>
+          Don't have an <a href="\signup">account</a> yet?
+        </p>
+
+        {{ form.submit(class='btn btn-primary') }}
+
+      </div>
+
+
+
+
+
+    </form>
+
+  </div>
+
+</body>
+
+
+{% endblock %}

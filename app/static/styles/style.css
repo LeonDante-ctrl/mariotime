@@ -1,0 +1,61 @@
+.top {
+  background-image: url(../images/BG\ img.png);
+  background-repeat: no-repeat;
+  background-size: 130em 50em;
+  text-align: center;
+}
+
+button.play {
+  margin-top: 18em;
+  margin-bottom: 8em;
+  padding: 0.5rem 4rem;
+  border-radius: 12px;
+  background-color: #DA9090;
+  border: none;
+}
+
+button.play:hover {
+  background-color: #ECC935;
+}
+
+div.second {
+  background-color: black;
+  color: white;
+}
+
+#mario {
+  height: 48em;
+  float: left;
+  margin-top: -26rem;
+  margin-left: 8rem;
+  padding-bottom: 5rem;
+}
+
+div.right {
+  margin-right: 30em;
+  padding-bottom: 8em;
+  padding-top: 8em;
+}
+
+
+div.container-fluid {
+  background-color: #B43838;
+}
+
+#demo {
+  margin: 0.5rem;
+  width: 45em;
+  height: 45em;
+  margin-left: 4rem;
+}
+
+#zombie {
+  height: 48em;
+  margin-top: -20rem;
+  margin-left: 20rem;
+  padding-bottom: 2rem;
+}
+
+div.text p{
+  margin-right: 6rem;
+}

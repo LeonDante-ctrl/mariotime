@@ -1,0 +1,11 @@
+
+body {
+  background-image: url('../images/BG\ img.png');
+}
+
+form.fom {
+  margin-top: 0.5rem;
+  background-color: #F3E3D6;
+  text-align: center;
+  padding: 1rem;
+}
