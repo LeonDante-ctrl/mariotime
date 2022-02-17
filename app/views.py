@@ -1,5 +1,5 @@
 from flask import redirect, render_template, url_for, flash
-from app import app, db
+from app import app, db, bcrypt
 from app.forms import RegistrationForm, LoginForm
 from app.models import User
 
@@ -59,6 +59,8 @@ def Register() :
   form = RegistrationForm()
 
   if form.validate_on_submit() :
+
+    encrypted_password = bcrypt.generate_password_hash(form.password.data)
 
     user = User(username=form.username.data, email=form.email.data, password=form.password.data)
 
