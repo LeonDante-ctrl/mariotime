@@ -14,7 +14,10 @@ db = SQLAlchemy(app)
 app.config['SECRET_KEY']='mariotimeshaviya'
 
 # configuring the database for SQLLite
-app.config['SQLALCHEMY_DATABASE_URI']='sqlite:///database/mario.db'
+# app.config['SQLALCHEMY_DATABASE_URI']='sqlite:///database/mario.db'
+
+# configuring the database for postgres
+app.config['SQLALCHEMY_DATABASE_URI']='postgresql://postgres:Access@localhost/mario'
 
 
 
