@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+#!/home/marc/gameCode/virtual/bin/python
+=======
 #!/home/moringa/Documents/core/flask/mariotime/virtual/bin/python
+>>>>>>> master
 # -*- coding: utf-8 -*-
 import re
 import sys
