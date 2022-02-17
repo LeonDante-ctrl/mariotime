@@ -1,6 +1,7 @@
 from flask import redirect, render_template, url_for, flash
-from app import app
+from app import app, db
 from app.forms import RegistrationForm, LoginForm
+from app.models import User
 
 
 
@@ -50,6 +51,8 @@ def Register() :
   form = RegistrationForm()
 
   if form.validate_on_submit() :
+
+    user = User(username=form.username.data, email=form.email.data, password=form.password.data)
 
     flash(f'Account created successfully for { form.username.data }', category='success text-center')
 
