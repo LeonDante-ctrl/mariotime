@@ -29,7 +29,11 @@ def login() :
 
     user = User.query.filter_by(username=form.username.data).first()
 
-    if user and form.password.data == user.password :
+    if user and bcrypt.check_password_hash(user.password, form.password.data) :
+    
+    # Cannot verify the ncrypted password
+    # if user and form.password.data == user.password :
+    
 
     #causing errors due to lack of the inputted username form data
     # if form.username.data == user.username and form.password.data == user.password :
