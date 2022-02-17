@@ -1,0 +1,20 @@
+.bg-light {
+  background-color: #AC2E1D !important;
+}
+
+img {
+  height: 3rem;
+}
+
+form>a {
+  color: white;
+  border: black solid 0.2rem;
+  border-radius: 5px;
+  padding: 0.2rem 1rem;
+}
+
+form>a:hover {
+  color: beige;
+  border: #418ED0 solid 0.2rem;
+  text-decoration: none;
+}
