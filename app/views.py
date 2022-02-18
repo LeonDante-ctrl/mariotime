@@ -1,6 +1,7 @@
 from flask import redirect, render_template, url_for, flash
-from app import app
+from app import app, db, bcrypt
 from app.forms import RegistrationForm, LoginForm
+from app.models import User
 
 
 
@@ -26,7 +27,19 @@ def login() :
 
   if form.validate_on_submit() :
 
-    if form.username.data == 'shaviya' and form.password.data == '123456' :
+    user = User.query.filter_by(username=form.username.data).first()
+
+    if user and bcrypt.check_password_hash(user.password, form.password.data) :
+    
+    # Cannot verify the ncrypted password
+    # if user and form.password.data == user.password :
+    
+
+    #causing errors due to lack of the inputted username form data
+    # if form.username.data == user.username and form.password.data == user.password :
+
+    # if form.username.data == 'shaviya' and form.password.data == '123456' :
+    
 
       flash(f'Logged in successfully for { form.username.data }', category='success text-center')
 
@@ -50,6 +63,13 @@ def Register() :
   form = RegistrationForm()
 
   if form.validate_on_submit() :
+
+    encrypted_password = bcrypt.generate_password_hash(form.password.data).decode('utf-8')
+
+    user = User(username=form.username.data, email=form.email.data, password=encrypted_password)
+
+    db.session.add(user)
+    db.session.commit()
 
     flash(f'Account created successfully for { form.username.data }', category='success text-center')
 
