@@ -1,7 +1,11 @@
 <<<<<<< HEAD
+#!/home/moringa/mariotime/virtual/bin/python3
+=======
+<<<<<<< HEAD
 #!/home/marc/gameCode/virtual/bin/python
 =======
 #!/home/moringa/Documents/core/flask/mariotime/virtual/bin/python
+>>>>>>> master
 >>>>>>> master
 # -*- coding: utf-8 -*-
 import re

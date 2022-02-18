@@ -37,6 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
+VIRTUAL_ENV="/home/moringa/mariotime/virtual"
 VIRTUAL_ENV="/home/moringa/Documents/core/flask/mariotime/virtual"
 export VIRTUAL_ENV
 
