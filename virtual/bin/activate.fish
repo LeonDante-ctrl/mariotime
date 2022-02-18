@@ -29,6 +29,8 @@ end
 # unset irrelevant variables
 deactivate nondestructive
 
+set -gx VIRTUAL_ENV "/home/moringa/mariotime/virtual"
+set -gx VIRTUAL_ENV "/home/marc/gameCode/virtual"
 set -gx VIRTUAL_ENV "/home/moringa/Documents/core/flask/mariotime/virtual"
 
 set -gx _OLD_VIRTUAL_PATH $PATH
